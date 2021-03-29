@@ -48,6 +48,11 @@ Come vedi ha generato una serie di dati coerenti con le impostazioni che abbiamo
 
 Se pensi che possa mancare qualcosa apri una issue, cercherò di implementare la funzione il prima possibile.
 
+# Note:
+- La lista di nomi e cognomi sono stati presi da due repository su github, non ricordo bene quali, se li ritrovo li cito
+- La funzione per il calcolo della data è stata palesemente rubata da stackoverflow
+- La licenza è un meme
+
 # Help! I can't speak italian!
 
 Sorry mate, i don't think i will translate the readme or even the script in english. However, is pretty easy to uderstand so you should be able to make it work even without instructions.
