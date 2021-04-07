@@ -2,6 +2,7 @@ from random import randint, uniform, randrange
 from datetime import timedelta, datetime
 nomi = open("nomi.txt").read().split()
 cognomi = open("cognomi.txt").read().split("\n")
+vie =  open("vie.txt").read().split("\n")
 
 class intero:
     def __init__(self, max, min=0):
@@ -26,12 +27,12 @@ class decimale:
 
 class nome:    
     def genera(self):
-        self.valore = nomi[randint(0, len(nomi))].split(",")[0].lower()
+        self.valore = nomi[randint(0, len(nomi)-1)].split(",")[0].lower()
         return '"' + self.valore + '"'
 
 class cognome:    
     def genera(self):
-        self.valore = cognomi[randint(0, len(cognomi))]
+        self.valore = cognomi[randint(0, len(cognomi)-1)]
         return '"' + self.valore + '"'
 
 class data:
@@ -93,6 +94,22 @@ class randomStringhe:
 
     def genera(self):
         return '"' + self.arr[randint(0, len(self.arr)-1)] + '"'
+
+class indirizzo:
+    def genera(self):
+        casi = ["Via ", "Viale ", "Piazza "]
+        return casi[randint(0, len(casi)-1)] + vie[randint(0, len(vie)-1)]
+
+class telefono:
+    def __init__(self, fisso=False):
+        self.fisso = fisso
+
+    def genera(self):
+        if self.fisso == False:
+            return str(randint(320, 396)) + str(randint(1000000, 9999999))
+        else:
+            return "0" + str(randint(10000000, 99999999))
+
 
 
 def generaQuery(struttura, iterazioni, tabella, campi):

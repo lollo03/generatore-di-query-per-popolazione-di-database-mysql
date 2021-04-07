@@ -18,6 +18,8 @@ Apri il file *main.py* e modifica l'array `struttura` con i seguenti elementi:
 - `sequenzaInteri(max, min)` genera una sequenza di interi, se le iterazioni sono maggiori del numero max la seqeuenza riparte dal min. Il default di min è 0.
 - `sequenzaStringhe(["array", "di", "stringhe"])` sequenzaInteri(max, min) genera una sequenza di interi, se le iterazioni sono maggiori del numero max la seqeuenza riparte dal min. Il default di min è 0.
 - `randomStringhe(["array", "di", "stringhe"])` sceglie dall'array dato come argomento una stringa a caso e la inserisce.
+- `indirizzo()` crea un indirizzo casuale, es: Via Verdi
+- `telefono()` genera un numero di telefono mobile. Se si usa `telefono(True)` genera un numero di telefono fisso.
 
 # Altre impostazioni
 
@@ -29,7 +31,7 @@ Apri il file *main.py* e modifica l'array `struttura` con i seguenti elementi:
 **Input:**
 
 ```
-struttura = [nome(), cognome(), intero(31, 18), data(1990, 2002), randomStringhe(["Roma", "Milano", "Napoli"])]
+struttura = [nome(), cognome(), intero(31, 18), data(1990, 2002), randomStringhe(["Roma", "Milano", "Napoli"]),indirizzo(), telefono()]
 iterazioni = 3
 tabella = "persone"
 campi = "nome, cognome, eta, dataNascita, citta" 
@@ -40,7 +42,7 @@ print(generaQuery(struttura, iterazioni, tabella, campi))
 ```
 **Output:**
 ```
-insert into persone (nome, cognome, eta, dataNascita, citta) values("omar", "Fusco", 28, "1999-08-22", "Roma"), ("adriano", "Silvestri", 27, "1992-11-09", "Roma"), ("roberto", "pereira de castro", 28, "1991-05-05", "Milano");
+insert into persone (nome, cognome, eta, dataNascita, citta) values("emanuele", "Cattaneo", 28, "1993-04-14", "Roma", Via IV Novembre, 3661533920), ("daniel", "casali", 20, "1995-08-31", "Milano", Via Tasso, 3653439945), ("ivan", "karim", 29, "2001-04-23", "Roma", Piazza Puccini, 3415798513);
 ```
 Come vedi ha generato una serie di dati coerenti con le impostazioni che abbiamo passato al programma. E' necessario notare come non appaiano tutte e 3 le città scelte da noi, in quanto casualmente è stata scela due volte roma.
 
