@@ -1,4 +1,4 @@
-from tipi import nome, cognome, intero, data, dataora, sequenzaInteri, sequenzaStringhe, randomStringhe, indirizzo, telefono,generaQuery
+from tipi import nome, cognome, intero, decimale, data, dataora, sequenzaInteri, sequenzaStringhe, randomStringhe, indirizzo, telefono, generaQuery
 
 #MODIFICA QUA SOTTO
 struttura = [nome(), cognome(), intero(70, 18), data(1990, 2002), dataora(2020), sequenzaInteri(5, 1), sequenzaStringhe(["questo", "è", "un", "test"]), randomStringhe(["questo", "è", "un", "test"]), indirizzo(), telefono(True)]
